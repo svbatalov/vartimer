@@ -15,11 +15,14 @@ var t = timer.run(function (x, y, z, ..) {
 }, delay, arg1, arg2, arg3, ..)
 ```
 where `delay` may be one of
-* delay in milliseconds,
+* delay in milliseconds (number),
 * a list of delays,
 * a function returning whole number.
 
 To stop the timer use `timer.clear(t)`.
+
+A list of delays is interpreted left-to-right. When the list is exhausted its last element is used
+for all consecutive timeouts.
 
 ## Motivation
 Sometimes you want `setInterval(cb, delay)` to call `cb` immediately and then start repeating:
@@ -31,3 +34,6 @@ Sometimes you want to use different delay for a first call (if you continue a sc
 timer.run(cb, [delay1, delay2]);
 ```
 First time `cb` will be called after `delay1` milliseconds and then repeatedly with `delay2` ms interval.
+
+## License
+MIT
