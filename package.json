@@ -1,0 +1,32 @@
+{
+  "name": "vartimer",
+  "version": "0.1.0",
+  "description": "setInterval() function allowing a list of intervals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "coverage": "node_modules/istanbul/lib/cli.js cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svbatalov/vartimer.git"
+  },
+  "keywords": [
+    "setInterval",
+    "setTimeout",
+    "setImmediate",
+    "timer",
+    "list"
+  ],
+  "author": "Sergey Batalov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svbatalov/vartimer/issues"
+  },
+  "homepage": "https://github.com/svbatalov/vartimer",
+  "devDependencies": {
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "should": "^7.0.1"
+  }
+}
